@@ -39,6 +39,15 @@ public class CustomersController
                 HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping(value = "/namelike/{custname}",
+        produces = {"application/json"})
+    public ResponseEntity<?> findCustomerByName(
+            @PathVariable
+                String custname)
+    {
+        List<Customer> myCustomerList = customersService.findByCustomerName(custname);
+        return new ResponseEntity<>(myCustomerList,
+                HttpStatus.OK);
+    }
 
 }
