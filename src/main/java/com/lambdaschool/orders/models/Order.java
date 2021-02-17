@@ -25,13 +25,13 @@ public class Order
     @JoinTable(name = "orderspayments",
         joinColumns = @JoinColumn(name = "ordnum"),
         inverseJoinColumns = @JoinColumn(name = "paymentid"))
-    @JsonIgnoreProperties("orders")
+    @JsonIgnoreProperties(value = "orders", allowSetters = true)
     Set<Payment> payments = new HashSet<>();
 
     @ManyToOne
     @JoinColumn(name = "custcode",
         nullable = false)
-    @JsonIgnoreProperties("orders")
+    @JsonIgnoreProperties(value = "orders", allowSetters = true)
     private Customer customer;
 
     public Order()
