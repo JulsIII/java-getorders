@@ -11,6 +11,6 @@ public interface CustomersService
 
     List<Customer> findByCustomerName(String custname);
 
-    Customer findCustomerById(long id);
+    Customer findCustomersById(long id);
 
 }
