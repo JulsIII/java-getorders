@@ -24,7 +24,7 @@ public class OrdersServiceImpl implements OrdersService
 
     @Override
     public Order findOrdersById(long id) throws
-
+            EntityNotFoundException
     {
         return ordersrepos.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Order " + id + " Not Found"));

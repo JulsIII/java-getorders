@@ -1,4 +1,8 @@
 package com.lambdaschool.orders.services;
 
-public interface PaymentService {
+import com.lambdaschool.orders.models.Payment;
+
+public interface PaymentService
+{
+    Payment save(Payment payment);
 }
