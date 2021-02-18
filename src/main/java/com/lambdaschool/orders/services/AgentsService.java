@@ -1,4 +1,8 @@
 package com.lambdaschool.orders.services;
 
-public interface AgentsService {
+import com.lambdaschool.orders.models.Agent;
+
+public interface AgentsService
+{
+    Agent findAgentById(long id);
 }
